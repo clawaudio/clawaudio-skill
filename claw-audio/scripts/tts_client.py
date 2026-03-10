@@ -8,7 +8,7 @@ import urllib.error
 import urllib.request
 import uuid
 
-DEFAULT_BASE_URL = os.environ.get("INDEX_TTS_BASE_URL", "http://192.168.122.165:8002")
+DEFAULT_BASE_URL = os.environ.get("CLAW_AUDIO_BASE_URL", "http://192.168.122.165:8002")
 
 
 def http_json(url: str, data: dict | None = None, timeout: int = 120):
@@ -76,7 +76,7 @@ def cmd_tts(args):
 
 
 def build_parser():
-    p = argparse.ArgumentParser(description="IndexTTS helper")
+    p = argparse.ArgumentParser(description="Local TTS helper")
     p.add_argument("--base-url", default=DEFAULT_BASE_URL)
     p.add_argument("--timeout", type=int, default=120)
     sub = p.add_subparsers(dest="cmd", required=True)
