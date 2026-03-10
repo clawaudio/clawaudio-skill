@@ -1,11 +1,11 @@
 ---
 name: index-tts
-description: Use a self-hosted IndexTTS API server to generate speech from text, upload reference audio, manage speaker presets, and prepare audio for chat voice messages. Use when the user mentions IndexTTS, a local TTS server, speaker cloning/reference audio, testing voices, generating WAV/Opus from text, or sending voice replies through a custom TTS backend.
+description: Use a self-hosted TTS API server to generate speech from text, upload reference audio, manage speaker presets, and prepare audio for chat voice messages. Use when the user mentions a local TTS server, speaker cloning/reference audio, testing voices, generating WAV/Opus from text, or sending voice replies through a custom TTS backend.
 ---
 
 # index-tts
 
-Use the user's IndexTTS server instead of an external TTS provider when they want cloned/reference voices or locally hosted generation.
+Use the user's local TTS server instead of an external TTS provider when they want cloned/reference voices or locally hosted generation.
 
 ## Quick start
 
@@ -16,7 +16,7 @@ python3 .agents/skills/index-tts/scripts/index_tts.py health
 python3 .agents/skills/index-tts/scripts/index_tts.py speakers
 python3 .agents/skills/index-tts/scripts/index_tts.py tts \
   --speaker Scarlett-60s \
-  --text "Hello from IndexTTS" \
+  --text "Hello from the local TTS service" \
   --out /tmp/index-tts-test.wav
 ```
 

@@ -1,8 +1,8 @@
 # clawaudio-skill
 
-IndexTTS skill for OpenClaw voice message workflows.
+A custom TTS skill for OpenClaw voice message workflows.
 
-This repository contains an `index-tts` skill that uses a self-hosted IndexTTS API server to:
+This repository contains a skill that uses a self-hosted TTS API server to:
 
 - check server health
 - list available speakers
@@ -13,12 +13,12 @@ This repository contains an `index-tts` skill that uses a self-hosted IndexTTS A
 ## Repository layout
 
 - `.agents/skills/index-tts/SKILL.md` — skill instructions
-- `.agents/skills/index-tts/scripts/index_tts.py` — helper CLI for the IndexTTS server
+- `.agents/skills/index-tts/scripts/index_tts.py` — helper CLI for the local TTS server
 - `index-tts.skill` — packaged skill artifact
 
 ## Default server
 
-The helper script currently defaults to:
+The helper script currently defaults to a local TTS endpoint:
 
 - `http://192.168.122.165:8002`
 
@@ -49,7 +49,7 @@ Generate WAV from text:
 ```bash
 python3 .agents/skills/index-tts/scripts/index_tts.py tts \
   --speaker Scarlett-60s \
-  --text "Hello from IndexTTS" \
+  --text "Hello from the local TTS service" \
   --out /tmp/index-tts-test.wav
 ```
 
