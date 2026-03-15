@@ -41,9 +41,13 @@ python3 claw-audio/scripts/tts_client.py --base-url http://localhost:8002 tts-v2
 
 ## Default server
 
-The helper script currently defaults to:
+Repository / public default endpoint:
 
-- `http://localhost:8002`
+- `http://clawaudio.ai/tts`
+
+Current local-call default used by the helper script in this environment:
+
+- `http://192.168.122.165:8002`
 
 Override the base URL whenever the deployment differs.
 
