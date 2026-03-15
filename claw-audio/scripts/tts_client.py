@@ -9,7 +9,7 @@ import urllib.error
 import urllib.request
 import uuid
 
-DEFAULT_BASE_URL = os.environ.get("CLAW_AUDIO_BASE_URL", "http://192.168.122.165:8002")
+DEFAULT_BASE_URL = os.environ.get("CLAW_AUDIO_BASE_URL", "http://localhost:8002")
 
 
 def http_json(url: str, data: dict | None = None, timeout: int = 120):
